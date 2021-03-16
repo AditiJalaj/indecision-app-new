@@ -1,0 +1,23 @@
+.header{
+    color:cornsilk;
+    background:$off-black;
+    margin-bottom:$xl-size;
+    padding:$m-size 0px;
+}
+.header__title{
+    font-size: $l-size;
+    margin:0;
+}
+
+.header__subtitle{
+    color:$off-white;
+    font-size:$m-size;
+    margin:0;
+    font-weight: 300;
+}
+
+@media (max-width:$desktop-breakpoint){
+    .header{
+        margin-bottom:$m-size;
+    }
+}

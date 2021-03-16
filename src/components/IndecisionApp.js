@@ -66,19 +66,25 @@ handleAddOption=(option)=>{
     
     render(){
         const title='Indecision App'
-        const subtitle="Place your life in the hands of a computer"
+        const subtitle="Let me pick what you should do "
         // let options=[12,23,32]
 
         return(
         <div>
 
         <Header title={title} subtitle={subtitle}/>
+        <div className='container'>
         <Action hasOptions={this.state.options}
         handlePick={this.handlePick}/>
+
+        <div className='widget'>
         <Options options={this.state.options}
         handleDeleteOption={this.handleDeleteOption}
         handleRemoveSingleOption={this.handleRemoveSingleOption}/>
         <AddOption handleAddOption={this.handleAddOption} />
+        </div>
+        </div>
+        
         <OptionModal selectedOption={this.state.selectedOption}
         handleClearModal={this.handleClearModal}/>
         </div>)
